@@ -1,0 +1,121 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    padding: 0 200px;
+}
+.blok {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.menu2 {
+    margin-left: 40px;
+}
+.link {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.2s color linear, 0.2s border linear;
+}
+.link:hover {
+   color: rgb(255, 145, 0);
+   border-bottom: 2px solid #ff9900;
+}
+.btn {
+    border: none;
+    font-size: 27px;
+    background-color: #ff9900;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: none;
+}
+@media(max-width:1050px) {
+    .container {
+       padding: 0 100px;
+    }
+    .blok {
+        margin-top: 10px;
+    }
+}
+@media(max-width:900px) {
+    .container {
+        padding: 0 50px;
+    }
+}
+@media(max-width:800px) {
+    .menu {
+        background-color: orange;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 200px;
+        flex-direction: column;
+        padding: 40px;
+        display: none;
+    }
+    .menu2 {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .link:hover {
+        border-bottom: 2px solid red;
+        color: red;
+    }
+    .btn {
+        display: block;
+    }
+    .team {
+        display: block;
+        animation: show 0.3s linear forwards;
+    }
+    .btn2 {
+        background-color: red;
+    }
+    @keyframes show {
+        0% {
+          transform: translateX(-100%);  
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+    .hide {
+        animation: hide 0.3s linear forwards;
+    }
+    @keyframes hide {
+        100% {
+          transform: translateX(-100%);  
+        }
+    }
+}
